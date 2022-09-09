@@ -9,14 +9,14 @@ class Movie():
         self.subgenre = subgenre
 
     def __repr__(self):
-        print(f'''
-        Movie title: {self.title},
-        Genre: {self.subgenre},
-        Ratings: {self.ratings},
-        Cost: {self.cost} 
+        return f'''
+        Movie title: {self.title}
         Release Date: {self.released}
-        ''')
-        return
+        Ratings: {self.ratings}
+        Genre: {", ".join(self.subgenre)}
+        Cost: {self.cost}
+        '''
+        
 
 #Hashmap that accounts for collisions using open addressing
 #Note for later:  key will be movie.title; value will be class of movie
@@ -69,7 +69,7 @@ class HashMap:
         return
 
     #getter function
-    def retrieve(self,key):
+    def retrieve(self, key):
         array_index = self.compressor(self.hash(key))
         possible_return_value = self.array[array_index]
         
@@ -99,7 +99,7 @@ class HashMap:
 #Creating variables:
 #Action Movies
 The_Kings_Man = Movie("The King's Man", '6.3/10', 2021, 19.99, ['Action', 'Adventure'])
-LOTR_RotK = Movie('Lord of the Rings: Return of the King', '9.0/10', 2003, 9.99, ['Action', 'Fantasy', 'Adventure'])
+LOTR_RotK = Movie('Lord of the Rings: Return Of The King', '9.0/10', 2003, 9.99, ['Action', 'Fantasy', 'Adventure'])
 Avengers_Endgame = Movie('Avengers Endgame', '8.4/10', 2019, 19.99, ['Action', 'Sci-fi'] )
 Rogue_One_SW = Movie('Rogue One: A Star Wars Story', '7.8/10', 2016, 19.99,  ['Action', 'Sci-fi'])
 The_Bourne_Identity = Movie('The Bourne Identity', '7.9/10', 2002, 14.99, ['Action', 'Thriller'])
@@ -121,7 +121,7 @@ Inception = Movie('Inception', '8.8/10', 2010, 9.99, ['Action', 'Sci-fi'])
 
 #Comedy
 The_Waterboy = Movie('The Waterboy', '6.1/10', 1998, 7.99, ['Comedy'])
-Dumb_and_dumber = Movie('Dumb and Dumber', '7.3/10', 1992, 9.99, ['Comedy'])
+Dumb_and_dumber = Movie('Dumb And Dumber', '7.3/10', 1992, 9.99, ['Comedy'])
 Shanghai_Knights = Movie('Shanghai Knights', '6.2/10', 2003, 9.99, ['Action', 'Comedy'])
 Free_Guy = Movie('Free Guy', '7.1/10', 2021, 19.99, ['Action', 'Comedy', 'Sci-fi'] )
 Step_Brothers = Movie('Step Brothers', '6.9/10', 2008, 7.99, ['Comedy'])
@@ -140,3 +140,4 @@ movie_hash_map = HashMap(25)
 for movie in movie_list:
     movie_hash_map.assign(movie.title, movie)
 
+print(movie_hash_map.retrieve('Avengers Endgame'))
