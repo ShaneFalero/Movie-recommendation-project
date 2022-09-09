@@ -15,6 +15,8 @@ class Movie():
         Ratings: {self.ratings}
         Genre: {", ".join(self.subgenre)}
         Cost: {self.cost}
+
+        ---------------------
         '''
         
 
@@ -100,8 +102,8 @@ class HashMap:
 #Action Movies
 The_Kings_Man = Movie("The King's Man", '6.3/10', 2021, 19.99, ['Action', 'Adventure'])
 LOTR_RotK = Movie('Lord of the Rings: Return Of The King', '9.0/10', 2003, 9.99, ['Action', 'Fantasy', 'Adventure'])
-Avengers_Endgame = Movie('Avengers Endgame', '8.4/10', 2019, 19.99, ['Action', 'Sci-fi'] )
-Rogue_One_SW = Movie('Rogue One: A Star Wars Story', '7.8/10', 2016, 19.99,  ['Action', 'Sci-fi'])
+Avengers_Endgame = Movie('Avengers Endgame', '8.4/10', 2019, 19.99, ['Action', 'Science Fiction'] )
+Rogue_One_SW = Movie('Rogue One: A Star Wars Story', '7.8/10', 2016, 19.99,  ['Action', 'Science Fiction'])
 The_Bourne_Identity = Movie('The Bourne Identity', '7.9/10', 2002, 14.99, ['Action', 'Thriller'])
 
 
@@ -113,17 +115,17 @@ Orphan_First_Kill = Movie('Orphan: First Kill', '6/10', 2022, 24.99, ['Horror', 
 Us = Movie('Us', '6.8/10', 2019, 14.99, ['Horror', 'Thriller'])
 
 #Science fiction
-Morbius = Movie('Morbius', '5.2/10', 2022, 19.99, ['Action', 'Fantasy', 'Sci-fi'] )
-Avatar = Movie('Avatar', '7.8/10', 2009, 9.99, ['Action, Sci-fi'])
-Interstellar = Movie('Intersteller', '8.6/10', 2014, 9.99, ['Sci-fi', 'Adventure'])
-Ready_Player_One = Movie('Ready Player One', '7.4/10', 2018, 9.99, ['Sci-fi', 'Action'] )
-Inception = Movie('Inception', '8.8/10', 2010, 9.99, ['Action', 'Sci-fi'])
+Morbius = Movie('Morbius', '5.2/10', 2022, 19.99, ['Action', 'Fantasy', 'Science Fiction'] )
+Avatar = Movie('Avatar', '7.8/10', 2009, 9.99, ['Action, Science Fiction'])
+Interstellar = Movie('Intersteller', '8.6/10', 2014, 9.99, ['Science Fiction', 'Adventure'])
+Ready_Player_One = Movie('Ready Player One', '7.4/10', 2018, 9.99, ['Science Fiction', 'Action'] )
+Inception = Movie('Inception', '8.8/10', 2010, 9.99, ['Action', 'Science Fiction'])
 
 #Comedy
 The_Waterboy = Movie('The Waterboy', '6.1/10', 1998, 7.99, ['Comedy'])
 Dumb_and_dumber = Movie('Dumb And Dumber', '7.3/10', 1992, 9.99, ['Comedy'])
 Shanghai_Knights = Movie('Shanghai Knights', '6.2/10', 2003, 9.99, ['Action', 'Comedy'])
-Free_Guy = Movie('Free Guy', '7.1/10', 2021, 19.99, ['Action', 'Comedy', 'Sci-fi'] )
+Free_Guy = Movie('Free Guy', '7.1/10', 2021, 19.99, ['Action', 'Comedy', 'Science Fiction'] )
 Step_Brothers = Movie('Step Brothers', '6.9/10', 2008, 7.99, ['Comedy'])
 
 #Drama
@@ -135,9 +137,10 @@ The_Queen = Movie('The Queen', '7.3/10' , 2006, 12.99, ['Drama', 'Historical Dra
 
 movie_list = [The_Kings_Man, LOTR_RotK, Avengers_Endgame, Rogue_One_SW, The_Bourne_Identity, Scream, The_Shining, The_Conjuring, Orphan_First_Kill, Us, Morbius, Avatar, Interstellar,
 Ready_Player_One, Inception, The_Waterboy, Dumb_and_dumber, Shanghai_Knights, Free_Guy, Step_Brothers, Gladiator, Titanic, Forrest_Gump, Django, The_Queen]
+genre_list = ['Comedy', 'Action', 'Adventure', 'Drama', 'Western', 'Science Fiction', 'Horror', 'Thriller', 'Fantasy', 'Mystery', 'Romance']
 
 movie_hash_map = HashMap(25)
 for movie in movie_list:
     movie_hash_map.assign(movie.title, movie)
 
-print(movie_hash_map.retrieve('Avengers Endgame'))
+#print((movie_hash_map.retrieve('Avengers Endgame')).ratings)
