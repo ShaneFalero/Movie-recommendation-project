@@ -101,8 +101,8 @@ class HashMap:
 The_Kings_Man = Movie("The King's Man", '6.3/10', 2021, 19.99, ['Action', 'Adventure'])
 LOTR_RotK = Movie('Lord of the Rings: Return of the King', '9.0/10', 2003, 9.99, ['Action', 'Fantasy', 'Adventure'])
 Avengers_Endgame = Movie('Avengers Endgame', '8.4/10', 2019, 19.99, ['Action', 'Sci-fi'] )
-Rogue_One_SW = Movie('Rogue One: A Star Wars Story', '7.8/10', 2016, 19.99  ['Action', 'Sci-fi'])
-The_Bourne_Identity = Movie('The Bourne Identity', '7.9/10', 2002, 14.99 ['Action', 'Thriller'])
+Rogue_One_SW = Movie('Rogue One: A Star Wars Story', '7.8/10', 2016, 19.99,  ['Action', 'Sci-fi'])
+The_Bourne_Identity = Movie('The Bourne Identity', '7.9/10', 2002, 14.99, ['Action', 'Thriller'])
 
 
 #Horror Movies
@@ -124,14 +124,19 @@ The_Waterboy = Movie('The Waterboy', '6.1/10', 1998, 7.99, ['Comedy'])
 Dumb_and_dumber = Movie('Dumb and Dumber', '7.3/10', 1992, 9.99, ['Comedy'])
 Shanghai_Knights = Movie('Shanghai Knights', '6.2/10', 2003, 9.99, ['Action', 'Comedy'])
 Free_Guy = Movie('Free Guy', '7.1/10', 2021, 19.99, ['Action', 'Comedy', 'Sci-fi'] )
-Step_Brothers = Movie('Step Brothers', '6.9/10' 2008, 7.99 ['Comedy'])
+Step_Brothers = Movie('Step Brothers', '6.9/10', 2008, 7.99, ['Comedy'])
 
 #Drama
 Gladiator = Movie('Gladiator', '8.5/10', 2000, 12.99, ['Action', 'Adventure', 'Drama'])
 Titanic = Movie('Titanic', '7.9/10', 1997, 12.99, ['Romance', 'Drama'])
 Forrest_Gump = Movie('Forrest Gump', '8.8/10', 1994, 14.99, ['Drama', 'Romance'])
-Django = Movie('Django', '8.4/10', 2012, 12.49 ['Western', 'Drama'])
+Django = Movie('Django', '8.4/10', 2012, 12.49, ['Western', 'Drama'])
 The_Queen = Movie('The Queen', '7.3/10' , 2006, 12.99, ['Drama', 'Historical Drama'])
 
+movie_list = [The_Kings_Man, LOTR_RotK, Avengers_Endgame, Rogue_One_SW, The_Bourne_Identity, Scream, The_Shining, The_Conjuring, Orphan_First_Kill, Us, Morbius, Avatar, Interstellar,
+Ready_Player_One, Inception, The_Waterboy, Dumb_and_dumber, Shanghai_Knights, Free_Guy, Step_Brothers, Gladiator, Titanic, Forrest_Gump, Django, The_Queen]
 
+movie_hash_map = HashMap(25)
+for movie in movie_list:
+    movie_hash_map.assign(movie.title, movie)
 
