@@ -16,6 +16,19 @@ Learned data structures:
 
 Use an algorithm taught throughout the course to sort or search data within a data structure to create a recommendation software that would sort through a primary category then output 
     a subcategory
+
+
+Algorithms learned:
+    Brute force algorithms
+    Divide and Conquer
+    Greedy algorithms
+    Dynamic programming
+    Pathfinding
+    Pattern Search
+    Sorting
+    Tree traversal algorithms
+
+
 My thoughts for this project were initially to create a tree to iterate through genres of movies, inquire what genre would like to be watched, then iterate thorugh a list of movies within the genre and output the appropriate movies - unfortunately the file got corrupted so I decided to change my approach.
 
 My new approach is going to be to again, class movies with subgenres, cost, ratings, and a title.
