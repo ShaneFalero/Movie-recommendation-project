@@ -144,3 +144,5 @@ for movie in movie_list:
     movie_hash_map.assign(movie.title, movie)
 
 #print((movie_hash_map.retrieve('Avengers Endgame')).ratings)
+#print(vars(movie_hash_map))
+
