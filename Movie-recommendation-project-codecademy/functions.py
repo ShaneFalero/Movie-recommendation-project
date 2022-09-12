@@ -39,18 +39,22 @@ def logic_movie(movie_list, user_input):
         if user_input.title() == movie.title.title():
             print(f'You have chosen: {movie}A good choice!')
             print(f'You are now watching: {movie.title}')
+            farewell()
+            return
         elif pattern_search(movie.title.title(), user_input.title()) == True:
             new_input = input(f'did you mean {movie.title.title()}: ')
             if new_input == 'yes':
                 print(f'You have chosen: {movie}A good choice!')
                 print(f'You are now watching: {movie.title}')
+                farewell()
+                return
             else:
-                print('Sorry we could not find the film you requested')
-        
+                print('Sorry we could not find the film you requested.  Please try again')
+                return
+    print('Sorry we could not find the film you requested.  Please try again')        
     return
 
 def pattern_search(text, pattern):
-    #print("Input Text:", text, "Input Pattern:", pattern)
     for index in range(len(text)):
         match_count = 0
         
@@ -67,9 +71,13 @@ def pattern_search(text, pattern):
             return True
         else: 
             return False
+
+def farewell():
+    print('Thank you for watching with Eucalyptus polyanthemos!')
+    print('Enjoy your movie!')
    
 
-logic_movie(logic_genre(inquire_genre(), variables.movie_hash_map), inquire_movie())
+#logic_movie(logic_genre(inquire_genre(), variables.movie_hash_map), inquire_movie())
 
 
 
